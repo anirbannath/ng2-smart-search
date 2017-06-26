@@ -1,0 +1,11 @@
+:host /deep/ .highlight {
+    background-color: yellow;
+}
+
+.margin-top-lg {
+    margin-top: 50px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}

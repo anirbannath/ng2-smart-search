@@ -1,0 +1,33 @@
+<div class="container margin-top-lg">
+  <div class="row">
+    <div class="col-lg-4">
+      <search-box [highlight]="true" [targetList]="inputArray" (resultList)="outputArray=$event"></search-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="margin-top">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>E-mail</th>
+              <th>Phone</th>
+              <th>Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of outputArray">
+              <td nowrap><span [innerHTML]="item.name"></span></td>
+              <td><span [innerHTML]="item.username"></span></td>
+              <td><span [innerHTML]="item.email"></span></td>
+              <td><span [innerHTML]="item.phone"></span></td>
+              <td><span [innerHTML]="item.website"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

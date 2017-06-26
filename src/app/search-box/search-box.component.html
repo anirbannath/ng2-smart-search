@@ -1,0 +1,10 @@
+<div class="input-group">
+  <div class="input-group-btn" dropdown>
+    <button type="button" dropdownToggle class="btn btn-default dropdown-toggle">{{selectedType}} <span class="caret"></span></button>
+    <ul *dropdownMenu class="dropdown-menu">
+      <li style="cursor: pointer"><a *ngFor="let o of options" (click)="selectedType=o">{{o}}</a></li>
+    </ul>
+  </div>
+  <input type="text" class="form-control" aria-label="search" id="search" name="search" placeholder="Search" [(ngModel)]="searchText"
+    (keyup)="onChangeSearchText()">
+</div>
