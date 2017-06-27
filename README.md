@@ -1,9 +1,5 @@
 # ng2-smart-search
 
-
-
-## Description
-
 The `ng2-smart-search` is component which takes two inputs, an list/array of objects to begin with and the `search` string.
 It then does an intuitive search and finds out records with closest match.
 
