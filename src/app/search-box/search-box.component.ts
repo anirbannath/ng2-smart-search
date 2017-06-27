@@ -98,14 +98,15 @@ export class SearchBoxComponent implements OnInit {
 
         let x = targetText.toLowerCase().indexOf(searchText.toLowerCase().charAt(0));
         if (x != -1) {
-          for (i = 0; i < searchText.length; i++) {
-            let y = (i > x) ? i : x;
-            y = (y > k) ? y : k;
+          for (i = x; i < searchText.length; i++) {
+            let y = (i > k) ? i : k;
+            let found = false;
             for (j = y; (j < targetText.length) && (j <= y + this.tolerance); j++) {
               if (searchText.toLowerCase().charAt(i) == targetText.toLowerCase().charAt(j)) {
                 c++;
-                k = j;
+                k = j + 1;
                 predictedText += targetText.charAt(j);
+                found = true;
                 break;
               }
               else {
@@ -113,6 +114,10 @@ export class SearchBoxComponent implements OnInit {
               }
             }
             predictedText = predictedText.trim();
+            if(!found) {
+              k = 0;
+              predictedText += " ";
+            }
           }
         }
 
