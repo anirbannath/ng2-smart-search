@@ -1,19 +1,22 @@
 # ng2-smart-search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+
 
 ## Description
 
 The `ng2-smart-search` is component which takes two inputs, an list/array of objects to begin with and the `search` string.
 It then does an intuitive search and finds out records with closest match.
 
-For example, if user searches for "Aniket Karmokar" and the list contains "Ankit Karmakar", it will return "Ankit Karmakar" as thats the closest match to the searched string. However, if "Aniket Karmokar" really exists in the list then `ng2-smart-search` will return both the records, "Aniket Karmokar" with 100% match and also "Ankit Karmakar" with more than 70% match (as the threshold is kept as 70%). This threshold is configurable.
+For example, if the user have mistyped and typed in `Leane Grohm` and the list contains actually `Leanne Graham` which the user expects to get / which is the correct result, `Leanne Graham` will be returned as thats the closest match to the searched string. However, if `Leane Grohm` really exists in the list then `ng2-smart-search` will return both the records, `Leane Grohm` with 100% match and also `Leanne Graham` with lesser match.
 
 This is the first draft of my project. Do fork if you like and find out places to improve.
 
 ## Setting up and Build
 
-After downloading this project you must do a `ng-install` to install the node modules and dependancies as I have not uploaded the node module to the github repo.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+You need to have Angular CLI version 1.1.1 to pull in the dependancies to run the project.
+
+After downloading this project just do a `ng-install` to install the node modules and dependancies as I have not uploaded the node module to the github repo.
 
 Do a `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
